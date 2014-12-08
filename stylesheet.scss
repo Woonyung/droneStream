@@ -1,0 +1,124 @@
+////// variables ///////
+$topMargin: 60px;
+$bottomMargin : 30px;
+
+@mixin buttonTraits{
+
+	border: 0px solid #006;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 10px;
+	cursor: pointer;
+
+	font-family: 'Open Sans', sans-serif;
+	font-size: 13px;
+	color: white;
+}
+
+
+@mixin radiusTraits{
+	border: 0px solid #006;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 10px;
+	cursor: pointer;
+	
+}
+
+a:link{
+	text-decoration: none;
+	color: black;
+}
+
+a:visited { 
+	color: black;
+}
+
+body{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+}
+
+/**********************************/
+#topBox{
+	height: $topMargin;
+	// background-color: red;
+}
+
+#button_2002,
+#button_2004,
+#button_2005,
+#button_2006,
+#button_2007,
+#button_2008,
+#button_2009,
+#button_2010,
+#button_2011,
+#button_2012,
+#button_2013,
+#button_2014 {
+	@include buttonTraits;
+	background-color: RGB(220,220,220);
+	width: 60px;
+	height: 40px;
+
+	&:hover{
+		background-color: RGB(200,200,200);
+	}
+}
+
+#animate_button{
+	@include buttonTraits;
+	height: 40px;
+	background-color:RGBA(26, 188, 156, 1);
+}
+
+#clear{
+	@include buttonTraits;
+	height: 40px;
+	background-color:RGBA(218, 0, 0, 1);
+}
+
+// detail
+#rightBox{
+	float: right;
+	width: 28%;
+	color: black;
+
+	/* scroll inside */
+	overflow: scroll;
+	height: 600px;;
+
+}
+
+.info{
+	@include radiusTraits;
+	padding-left:10px;
+	width: 250px;
+	height: 70px;
+	font-size: 11px;
+	background-color: RGB(220,220,220);
+
+	&:hover{
+		background-color: RGB(200,200,200);
+	}
+}
+
+
+#map {
+	top: $topMargin;
+	bottom: $bottomMargin;
+	position: absolute; 
+	width: 70%;
+}
+
+
+#footer{
+	position: absolute;
+	bottom: 10px;
+}
+
